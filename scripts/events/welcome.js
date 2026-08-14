@@ -28,7 +28,7 @@ module.exports = {
   config: {
     name: "welcome",
     version: "4.1",
-    author: "MR᭄﹅ MAHABUB﹅ メꪜ",
+    author: "MR᭄﹅ Ariyan﹅ メꪜ",
     category: "events"
   },
 
@@ -50,13 +50,13 @@ module.exports = {
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 ${nickname}☔︎ 𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦𝗙𝗨𝗟𝗟
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
-𝗕𝗢𝗧 𝗔𝗗𝗠𝗜𝗡: 𝐌𝐀𝐇𝐀𝐁𝐔𝐁 𝐑𝐀𝐇𝐌𝐀𝐍
+𝗕𝗢𝗧 𝗔𝗗𝗠𝗜𝗡: ARIYAN AHMED SABBIR
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
-𝗙𝗔𝗖𝗘𝗕𝗢𝗢𝗞: https://www.facebook.com/www.xnxx.com140
+𝗙𝗔𝗖𝗘𝗕𝗢𝗢𝗞: https://www.facebook.com/ana.alsa.583?mibextid=ZbWKwL
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
-𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣: wa.me/+8801613356376
+𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣: wa.me/+8801937278213
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
-𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠: t.me/Mahabub_x_Rahman
+𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠: t.me/Its_Ariyan_x
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
         `;
         await api.sendMessage(msg, threadID);
@@ -79,12 +79,12 @@ ${nickname}☔︎ 𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦�
 
       // Random backgrounds
       const backgrounds = [
-        "https://files.catbox.moe/cj68oa.jpg",
-        "https://files.catbox.moe/0n8mmb.jpg",
-        "https://files.catbox.moe/hvynlb.jpg",
-        "https://files.catbox.moe/leyeuq.jpg",
-        "https://files.catbox.moe/7ufcfb.jpg",
-        "https://files.catbox.moe/y78bmv.jpg"
+        "https://i.imgur.com/8T48Ddf.png",
+        "https://i.imgur.com/8T48Ddf.png",
+        "https://imgur.com/8T48Ddf",
+        "https://imgur.com/8T48Ddf",
+        "https://imgur.com/8T48Ddf",
+        "https://i.imgur.com/8T48Ddf.png"
       ];
       const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
 
