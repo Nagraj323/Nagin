@@ -14,15 +14,15 @@ module.exports = {
 
 	onStart: async function ({ message }) {
 	 var link = [ 
-"https://i.ibb.co/jfqMF07/image.jpg",
-"https://i.ibb.co/tBBCS4y/image.jpg",
-"https://i.ibb.co/3zpyMVY/image.jpg",
-"https://i.ibb.co/gWbWT8k/image.jpg",
-"https://i.ibb.co/mHtyD1P/image.jpg",
-"https://i.ibb.co/vPHNhdY/image.jpg",
-"https://i.ibb.co/rm6rPjb/image.jpg",
-"https://i.ibb.co/7GpN2GW/image.jpg",
-"https://i.ibb.co/CnfMVpg/image.jpg",
+"https://i.imgur.com/IxlH0As.jpeg",
+"https://i.ibb.co/9m612JTn/52371.jpg",
+"https://i.ibb.co/Dg769n2k/24650695.jpg",
+"https://i.ibb.co/VY2Bs0rC/images-4.jpg",
+"https://i.ibb.co/Tx8bBw32/2064.jpg",
+"https://i.ibb.co/ffc4ZsC/68e98449eb450985331583.jpg",
+"",
+"",
+"",
 	]
 let img = link[Math.floor(Math.random()*link.length)]
 message.send({
