@@ -17,12 +17,12 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "100014754734049",
-    "61552591230081"
+    "100028959431665",
+    "61591654275272"
   ],
   "vip": [
-    "100014754734049",
-    "61552591230081"
+    "100028959431665",
+    "61591654275272"
   ],
   "whiteListMode": {
     "enable": false,
@@ -30,7 +30,7 @@
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "nickNameBot": "🪽🐰 Your Baby🔥🩷",
-  "prefix": "!",
+  "prefix": "/",
   "api": "https://mahabub-apis.fun",
   "database": {
     "type": "mongodb",
@@ -42,7 +42,7 @@
   "timeZone": "Asia/Dhaka",
   "credentials": {
   "gmailAccount": {
-      "email": "mpk852546@gmail.com",
+      "email": "ariyanking0970@gmail.com",
       "clientId": "468637297192-06rlphmj6lohjaj87l9f2faugjpvjo2m.apps.googleusercontent.com",
       "clientSecret": "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",
       "refreshToken": "1//04HwrGyc1o84yCgYIARAAGAQSNwF-L9IrUgry1nG4YkdzjTCMo2dHLKsXrCnebeUNyfo5W-LeiqRo76BM6K48I1EKjIvwpTwO3xI",
