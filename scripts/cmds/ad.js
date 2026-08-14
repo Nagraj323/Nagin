@@ -1,6 +1,6 @@
 const axios = require("axios");
-const fs = require("fs");
-const path = require("path");
+const fs = require("node:fs");
+const path = require("node:path");
 
 module.exports = {
   config: {
@@ -17,15 +17,15 @@ module.exports = {
     },
     category: "𝗙𝗨𝗡 & 𝗚𝗔𝗠𝗘",
     guide: {
-      en: "{p}ad [@mention or reply]\nIf no mention or reply, uses your profile picture."
+      en: "{p}ad [@mention or reply]"
     }
   },
 
   onStart: async function ({ api, event, message }) {
     const { senderID, mentions, type, messageReply } = event;
 
-    // Determine user ID for avatar
     let uid;
+
     if (Object.keys(mentions).length > 0) {
       uid = Object.keys(mentions)[0];
     } else if (type === "message_reply") {
@@ -34,23 +34,44 @@ module.exports = {
       uid = senderID;
     }
 
-    const avatarURL = `https://graph.facebook.com/${uid}/picture?width=512&height=512&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32`;
+    const avatarURL =
+      `https://graph.facebook.com/${uid}/picture?width=512&height=512&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32`;
+
+    const cacheDir = path.join(__dirname, "cache");
+
+    if (!fs.existsSync(cacheDir)) {
+      fs.mkdirSync(cacheDir, { recursive: true });
+    }
 
     try {
-      const res = await axios.get(`https://api.popcat.xyz/v2/ad?image=${encodeURIComponent(avatarURL)}`, {
-        responseType: "arraybuffer"
-      });
+      const res = await axios.get(
+        `https://api.popcat.xyz/v2/ad?image=${encodeURIComponent(avatarURL)}`,
+        {
+          responseType: "arraybuffer"
+        }
+      );
 
-      const filePath = path.join(__dirname, "cache", `ad_${uid}_${Date.now()}.png`);
+      const filePath = path.join(
+        cacheDir,
+        `ad_${uid}_${Date.now()}.png`
+      );
+
       fs.writeFileSync(filePath, res.data);
 
-      message.reply({
-        body: "📢 Here's your ad style image!",
-        attachment: fs.createReadStream(filePath)
-      }, () => fs.unlinkSync(filePath));
+      message.reply(
+        {
+          body: "📢 Here's your ad style image!",
+          attachment: fs.createReadStream(filePath)
+        },
+        () => {
+          if (fs.existsSync(filePath)) {
+            fs.unlinkSync(filePath);
+          }
+        }
+      );
 
     } catch (err) {
-      console.error(err);
+      console.error("AD COMMAND ERROR:", err);
       message.reply("❌ | Failed to generate ad image.");
     }
   }
